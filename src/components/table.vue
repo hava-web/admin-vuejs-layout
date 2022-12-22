@@ -1,38 +1,29 @@
 <template>
-    <v-app id="inspire">
-      <v-app-bar
-        app
-        extended
-      >
-        <v-app-bar-nav-icon></v-app-bar-nav-icon>
-  
-        <v-toolbar-title>Application</v-toolbar-title>
-  
-        <v-spacer></v-spacer>
-  
-        <v-btn icon>
-          <v-icon>mdi-dots-vertical</v-icon>
-        </v-btn>
-      </v-app-bar>
-  
-      <v-main>
-        <v-container>
-          <v-row>
-            <v-col
-              v-for="n in 24"
-              :key="n"
-              cols="4"
-            >
-              <v-card height="200"></v-card>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-main>
-    </v-app>
-  </template>
-  
-  <script>
-    export default {
-      //
-    }
-  </script>
+  <v-app id="inspire">
+    <v-navigation-drawer
+      v-model="drawer"
+      app
+    >
+      <!-- Slide bar -->
+
+    </v-navigation-drawer>
+
+    <v-app-bar app> 
+    <!-- Nav Bar -->
+      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+
+      <v-toolbar-title>My Application</v-toolbar-title>
+    </v-app-bar>
+
+    <v-main>
+      <!-- Content -->
+      
+    </v-main>
+  </v-app>
+</template>
+
+<script>
+  export default {
+    data: () => ({ drawer: null }),
+  }
+</script>
